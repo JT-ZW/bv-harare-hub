@@ -1,0 +1,2 @@
+<script lang="ts">import type {Notice} from '$lib/data/notices';let {notice}: {notice:Notice}=$props();</script>
+<a class="notice-card" href={'/noticeboard/'+notice.slug}><span class="tag">{notice.type}</span><h3>{notice.title}</h3><p>{notice.excerpt}</p><span class="text-link">Read update <span>↗</span></span></a>

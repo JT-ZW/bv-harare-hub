@@ -1,0 +1,21 @@
+{
+  "name": "bevisioneers-harare-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.48.0",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "svelte": "^5.43.0",
+    "svelte-check": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}
