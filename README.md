@@ -17,7 +17,15 @@ npm.cmd run build
 npm.cmd run preview
 ```
 
-The production export is in `build/`. Configure static hosting to serve directory index pages and `404.html` for unknown routes. Future live Supabase content should use server rendering with an appropriate SvelteKit adapter or trigger a rebuild when content changes; the current export does not fetch live data.
+The production export is in `build/`. Configure static hosting to serve extensionless HTML pages (for example, `/about` maps to `about.html`) and `404.html` for unknown routes. Future live Supabase content should use server rendering with an appropriate SvelteKit adapter or trigger a rebuild when content changes; the current export does not fetch live data.
+
+## Deploy on Vercel
+
+Import this repository with the repository root as the Root Directory. The checked-in `vercel.json` sets the build command to `npm run build`, the Output Directory to `build`, and enables extensionless HTML routes with `cleanUrls`.
+
+This release is deployed as a static site (Framework Preset: Other). No environment variables are needed. The adapter's `Detected Vercel` message about zero-config mode is informational: this project intentionally uses an explicit static output directory and a `404.html` fallback.
+
+After configuration changes, deploy the latest commit rather than rebuilding an older failed commit.
 
 ## Public pages
 
