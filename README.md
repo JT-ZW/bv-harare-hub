@@ -42,7 +42,7 @@ After configuration changes, deploy the latest commit rather than rebuilding an 
 
 `src/lib/data/notices.ts` holds approved notices. Add published entries there during the static phase and rebuild; dates and expiry are checked when rendered. A static export must be rebuilt to reflect publication/expiry changes. The future database also enforces publication and expiry in its read policies.
 
-The visual reference is https://bevisioneers.world/ (home, about, fellows, and insights/stories), reviewed on 27 October 2026. Palette and Articulat typography follow the reference. The logo, webfonts, and two global fellowship images were retrieved from that site for this chapter preview. Global images are labelled as global-community imagery; replace them with approved Harare photos when available. Confirm chapter brand/asset usage with the global team before a public launch. Fellow cards use initials, not invented portraits.
+The visual reference is https://bevisioneers.world/ (home, about, fellows, and insights/stories), reviewed on 27 October 2026. Palette and Articulat typography follow the reference. The logo and webfonts were retrieved from that site for this chapter preview. All community photographs now use the supplied Harare Hub images; see `docs/local-photography.md` for the selection and source mapping. Confirm chapter brand/asset usage with the global team before a public launch. Fellow cards use initials, not invented portraits.
 
 ## Supabase phase two
 
@@ -59,4 +59,4 @@ The migration has been prepared but has not been applied or tested against a liv
 
 ## Remaining content
 
-Leadership names/roles, an official chapter contact channel, Harare photography, fellow bios and project details, and the first approved notices. The contact page routes visitors to available fellow LinkedIn links and clearly distinguishes global fellowship enquiries; it does not simulate sending messages.
+Leadership names/roles, an official chapter contact channel, fellow bios and project details, and the first approved notices. The contact page routes visitors to available fellow LinkedIn links and clearly distinguishes global fellowship enquiries; it does not simulate sending messages.

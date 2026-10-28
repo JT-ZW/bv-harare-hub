@@ -1794,3 +1794,46 @@ footer {
 @media (max-width: 1150px) { .site-header .brand { width: 300px; gap: 16px; padding: 10px 12px; } .site-header .brand .global-wordmark { width: 190px; } .site-header .brand .hub-mark { width: 65px; } }
 @media (max-width: 800px) { .site-header .brand { width: 280px; } .site-header .brand .global-wordmark { width: 175px; } .site-header .brand .hub-mark { width: 62px; } .marquee-inner { gap: 24px; } .marquee-inner > span { font-size: clamp(14px, 2.25vw, 19px); } .marquee-inner > span:not(:last-child)::after { right: -21px; font-size: 22px; } }
 @media (max-width: 560px) { .site-header { gap: 12px; } .site-header .brand { width: min(265px, calc(100% - 65px)); gap: 12px; padding: 9px 10px; } .site-header .brand .global-wordmark { width: calc(100% - 67px); height: auto; } .site-header .brand .hub-mark { width: 55px; height: auto; } .menu-button { padding: 8px 0; font-size: 13px; flex-shrink: 0; } .marquee { padding: 19px var(--pad); } .marquee-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 34px; } .marquee-inner > span { font-size: clamp(18px, 5vw, 24px); } .marquee-inner > span:nth-child(2)::after { display: none; } .marquee-inner > span:not(:last-child)::after { right: -27px; font-size: 23px; } }
+
+/* Local photography: show the complete group and keep faces clear. */
+.hero-visual { padding-bottom: 74px; }
+.hero-image { height: auto; aspect-ratio: 4 / 3; border-top-left-radius: 85px; }
+.hero-image img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.visual-note { bottom: 0; }
+.community-figure img { height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.hub-life-section { padding-top: 20px; }
+.hub-life-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.hub-life-gallery figure { margin: 0; min-width: 0; }
+.hub-life-gallery img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; }
+.hub-life-gallery figure:nth-child(2) img { border-top-left-radius: 90px; }
+.hub-life-gallery figcaption { padding-top: 18px; }
+.hub-life-gallery figcaption > span { font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+.hub-life-gallery h3 { font-size: clamp(21px, 2vw, 29px); margin-top: 9px; }
+@media (max-width: 800px) { .hero-visual { padding-bottom: 80px; } .hero-image { border-top-left-radius: 60px; } .hub-life-gallery { gap: 16px; } }
+@media (max-width: 560px) { .hero-visual { padding-bottom: 80px; } .hero-image { border-top-left-radius: 65px; } .hero-image .image-caption { font-size: 8px; left: 14px; bottom: 14px; } .hub-life-gallery { grid-template-columns: 1fr; gap: 32px; } .hub-life-gallery img { max-height: none; } .hub-life-gallery h3 { font-size: 28px; } }
+
+/* Fellows introduction: chapter photography with a readable foreground. */
+.fellows-photo-hero { isolation: isolate; min-height: 600px; padding-top: 64px; padding-bottom: 42px; color: #fff; background: #18251f; display: flex; align-items: center; }
+.fellows-hero-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 64%; z-index: -2; }
+.fellows-photo-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,20,15,.91) 0%, rgba(10,20,15,.76) 38%, rgba(10,20,15,.24) 75%), linear-gradient(0deg, rgba(10,20,15,.36), transparent 45%); z-index: -1; }
+.fellows-hero-content { width: 100%; max-width: 800px; }
+.fellows-photo-hero h1 { font-size: clamp(46px, 4.8vw, 76px); line-height: 1.03; margin: 25px 0; max-width: 800px; }
+.fellows-hero-content > p:not(.eyebrow) { max-width: 510px; font-size: 18px; line-height: 1.5; }
+.fellows-photo-hero .eyebrow { color: var(--yellow); }
+.fellows-photo-hero .hero-footnote { border-top-color: #ffffff55; max-width: 600px; margin-top: 34px; }
+.fellows-photo-label { position: absolute; right: var(--pad); bottom: 25px; font-size: 9px; letter-spacing: .08em; }
+/* About: a balanced editorial feature, with the complete group in frame. */
+.about-community-feature { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: clamp(30px, 5vw, 80px); padding-top: 12px; padding-bottom: 35px; }
+.about-community-photo { margin: 0; min-width: 0; }
+.about-community-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 6px 70px 6px 6px; }
+.about-community-photo figcaption { margin-top: 12px; font-size: 11px; color: #595a54; }
+.about-community-copy h2 { margin: 17px 0 25px; font-size: clamp(35px, 3.5vw, 53px); }
+.about-community-copy > p:not(.eyebrow) { max-width: 440px; font-size: 17px; margin-bottom: 18px; }
+.about-community-copy .button { margin-top: 10px; }
+@media (min-width: 1600px) { .about-community-feature { max-width: 1500px; } }
+@media (max-width: 800px) { .fellows-photo-hero { min-height: 560px; } .fellows-photo-hero h1 { max-width: 600px; } .fellows-photo-label { display: none; } .about-community-feature { grid-template-columns: 1fr; gap: 28px; } .about-community-photo { width: 100%; max-width: 640px; margin-inline: auto; } .about-community-copy { max-width: 640px; margin-inline: auto; width: 100%; } .about-community-copy > p:not(.eyebrow) { max-width: 580px; } }
+@media (max-width: 560px) { .fellows-photo-hero { min-height: 650px; align-items: start; padding-top: 35px; padding-bottom: 280px; } .fellows-photo-hero h1 { font-size: clamp(38px, 10.2vw, 52px); margin: 22px 0; padding-right: 0; } .fellows-hero-background { inset: auto 0 0; height: auto; aspect-ratio: 4 / 3; object-fit: contain; } .fellows-photo-hero::after { background: linear-gradient(180deg, #18251f 0%, #18251f 47%, rgba(24,37,31,.85) 58%, rgba(24,37,31,.05) 83%); } .fellows-hero-content > p:not(.eyebrow) { font-size: 16px; } .fellows-photo-hero .hero-footnote { font-size: 8px; gap: 10px; margin-top: 22px; padding-top: 16px; flex-wrap: wrap; } .about-community-feature { padding-top: 0; padding-bottom: 12px; } .about-community-copy h2 { font-size: 37px; } .about-community-copy > p:not(.eyebrow) { font-size: 16px; } }
+
+/* Keep long impact-zone options inside the directory filter grid. */
+.filters > label { min-width: 0; }
+.filters input, .filters select { width: 100%; min-width: 0; }
